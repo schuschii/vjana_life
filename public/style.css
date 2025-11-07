@@ -1,165 +1,119 @@
-/* Chck what is needed + when I zoom out the texts move to the middle of the page, when zoomed in they move below the header box*/
-
+/* ====== GENERAL HEADER BOX ====== */
 .box {
-  width: 100%; /* fill full width of viewport */
-  height: 100px;
+  width: 100%;
+  min-height: 100px;
 }
 
+/* Fixed header container */
 .box .header-group {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  min-height: 100px;
 }
 
+/* Header row layout */
 .box .header-desktop {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
-  gap: 0px 24.59px;
-  padding: 0 20px;
-  height: 100px;
-  box-sizing: border-box; 
+  gap: 0 1.5rem; /* ~24px */
+  padding: 0 1.25rem; /* ~20px */
+  min-height: 100px;
+  box-sizing: border-box;
   background: var(--background-color-dark);
 }
 
+
+/* Logo image */
 .box .chatgpt-image-jul {
-  position: relative;
   width: 100px;
   height: 100px;
-  aspect-ratio: 1;
   object-fit: cover;
 }
 
-.box .button-list {
+/* ====== SOCIAL ICONS ====== */
+.box .social-list {
   display: inline-flex;
   align-items: center;
-  gap: 16.39px;
-  position: relative;
+  gap: 0.6rem; /* smaller + responsive */
   flex: 0 0 auto;
 }
 
-.box .img {
-  position: relative;
-  width: 24.59px;
-  height: 24.59px;
+.box .social-link {
+  color: var(--text-color-dark-gray);
+  font-size: 1.6rem; /* icon size scales correctly */
+  transition: 0.4s;
 }
 
-.box .navigation-pill-list {
+.box .social-link:hover {
+  transform: translateY(0.25rem);
+}
+
+/* ====== NAVIGATION MENU ====== */
+.box .navigation-item-list {
   display: flex;
   flex-wrap: wrap;
-  width: 886px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 8.2px 8.2px;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1; /* replaces the fixed 886px width */
 }
 
-.box .navigation-pill {
+/* Menu item container */
+.box .navigation-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8.2px;
-  padding: 8.2px;
-  position: relative;
-  flex: 0 0 auto;
+  gap: 0.5rem;
+  padding: 0.5rem;
   background-color: var(--background-color-white);
-  border-radius: 8.16px;
+  border-radius: 0.5rem;
 }
 
+/* Menu text */
 .box .title {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin-top: -1.02px;
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: var(--text-color-dark-gray);
-  font-size: 16.4px;
-  letter-spacing: 0;
-  line-height: 16.4px;
+  font-size: 1rem; /* ~16px */
+  line-height: 1rem;
   white-space: nowrap;
 }
 
 .box .title-wrapper {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8.2px;
-  padding: 8.2px;
-  position: relative;
-  flex: 0 0 auto;
-  border-radius: 8.16px;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.box .header-auth {
+/* ====== LANGUAGE SWITCHER ====== */
+.header-language-switcher {
   display: flex;
-  width: 182.35px;
+  gap: 0.75rem; /* ~12px */
   align-items: center;
-  gap: 12.29px;
-  position: relative;
 }
 
-.box .button {
-  all: unset;
-  box-sizing: border-box;
-  display: flex;
-  width: 85.03px;
-  align-items: center;
-  justify-content: center;
-  gap: 8.2px;
-  padding: 8.2px;
-  position: relative;
-  background-color: var(--accent-color-light-blue);
-  border-radius: 8.16px;
-  overflow: hidden;
-  border: 1px solid;
+.separator {
+  color: var(--text-color-dark-gray);
+  opacity: 0.7;
 }
 
-.box .text-wrapper {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
+.lang-option {
   font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: var(--background-color-white);
-  font-size: 16.4px;
-  letter-spacing: 0;
-  line-height: 16.4px;
-  white-space: nowrap;
+  font-size: 1rem;
+  color: var(--text-color-dark-gray);
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.box .div {
-  all: unset;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8.2px;
-  padding: 8.2px;
-  position: relative;
-  flex: 1;
-  flex-grow: 1;
-  background-color: var(--background-color-white);
-  border-radius: 8.16px;
-  overflow: hidden;
-  border: 1px solid;
-  border-color: var(--accent-color-dark-blue);
-}
-
-.box .button-2 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Inter", Helvetica;
-  font-weight: 400;
-  color: var(--accent-color-dark-blue);
-  font-size: 16.4px;
-  letter-spacing: 0;
-  line-height: 16.4px;
-  white-space: nowrap;
+.lang-option.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--background-color-white);
 }
