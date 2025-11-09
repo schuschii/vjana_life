@@ -1,0 +1,122 @@
+/* ====== GENERAL HEADER BOX ====== */
+.box {
+  width: 100%;
+  min-height: 100px;
+}
+
+/* Fixed header container */
+.box .header-group {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+}
+
+/* Header row layout */
+.box .header-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  gap: 0 1.5rem; /* ~24px */
+  padding: 0 1.25rem; /* ~20px */
+  min-height: 100px;
+  box-sizing: border-box;
+  background: var(--background-color-dark);
+}
+
+
+/* Logo image */
+.box .chatgpt-image-jul {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* ====== SOCIAL ICONS ====== */
+.box .social-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem; /* smaller + responsive */
+  flex: 0 0 auto;
+}
+
+.box .social-link {
+  color: var(--text-color-dark-gray);
+  font-size: 1.6rem; /* icon size scales correctly */
+  transition: 0.4s;
+}
+
+.box .social-link:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* ====== NAVIGATION MENU ====== */
+.box .navigation-item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1; /* replaces the fixed 886px width */
+}
+
+/* Menu item container */
+.box .navigation-item-active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--background-color-white);
+  border-radius: 0.5rem;
+}
+
+/* Menu text */
+.box .title {
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: var(--text-color-dark-gray);
+  font-size: 1rem; /* ~16px */
+  line-height: 1rem;
+  white-space: nowrap;
+}
+
+.box .navigation-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.navigation-item:hover {
+  background-color: var(--background-color-white);
+  border-radius: 0.5rem;
+}
+
+/* ====== LANGUAGE SWITCHER ====== */
+.header-language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: 3rem; /* adds space between social + lang switch */
+}
+
+.separator {
+  color: var(--text-color-dark-gray);
+  opacity: 0.7;
+}
+
+.lang-option {
+  font-family: "Inter", Helvetica;
+  font-size: 0.85rem; /* ~14px */
+  color: var(--text-color-dark-gray);
+  cursor: pointer;
+}
+
+.lang-option.active {
+  color: var(--background-color-white); 
+  font-weight: 700;
+}
