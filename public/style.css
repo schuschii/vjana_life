@@ -1,20 +1,17 @@
-/* ====== GENERAL HEADER BOX ====== */
-.box {
-  width: 100%;
-  min-height: 100px;
-}
+/* ====== GENERAL HEADER BOX ====== *
 
 /* Fixed header container */
-.box .header-group {
+.header-group {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100px;
+  z-index: 10; /* ensures header is above hero */
 }
 
 /* Header row layout */
-.box .header-desktop {
+.header-desktop {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -28,32 +25,32 @@
 
 
 /* Logo image */
-.box .chatgpt-image-jul {
+.logo {
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
 
 /* ====== SOCIAL ICONS ====== */
-.box .social-list {
+.social-list {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem; /* smaller + responsive */
   flex: 0 0 auto;
 }
 
-.box .social-link {
+.social-link {
   color: var(--text-color-dark-gray);
   font-size: 1.6rem; /* icon size scales correctly */
   transition: 0.4s;
 }
 
-.box .social-link:hover {
+.social-link:hover {
   transform: translateY(-0.25rem);
 }
 
 /* ====== NAVIGATION MENU ====== */
-.box .navigation-item-list {
+.navigation-item-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -63,7 +60,7 @@
 }
 
 /* Menu item container */
-.box .navigation-item-active {
+.navigation-item-active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +71,7 @@
 }
 
 /* Menu text */
-.box .title {
+.title {
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: var(--text-color-dark-gray);
@@ -83,7 +80,7 @@
   white-space: nowrap;
 }
 
-.box .navigation-item {
+.navigation-item {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -119,4 +116,92 @@
 .lang-option.active {
   color: var(--background-color-white); 
   font-weight: 700;
+}
+
+/* ====== HERO ====== */
+.hero-desktop {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  background-image: url(../photos/hero.jpg);
+  background-size: cover;
+  background-position: 50% 68%;
+  background-repeat: no-repeat;
+}
+
+/* Title container */
+.hero-desktop .hero-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 45vw;
+  align-items: flex-start;
+  gap: 0.5rem;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+}
+
+/* Main title text */
+.hero-desktop .text-hero-title {
+  display: block;
+  text-align: left;
+  font-family: "Raleway-SemiBold", Helvetica;
+  font-weight: 600;
+  color: var(--text-color-dark-gray);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* Subtitle text */
+.hero-desktop .text-hero-subtitle {
+  display: block;
+  text-align: left;
+  font-family: "Raleway-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--text-color-dark-gray);
+  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  line-height: 1.2;
+}
+
+/* Button group */
+.hero-desktop .button-group {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button */
+.hero-desktop .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--accent-color-light-blue);
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Button text */
+.hero-desktop .hero-button-text {
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: var(--background-color-white);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  white-space: nowrap;
+}
+
+/* Hover style */
+.hero-desktop .button:hover {
+  background-color: var(--background-color-white);
+}
+
+.hero-desktop .button:hover .hero-button-text {
+  color: var(--text-color-dark-gray);
 }
