@@ -2,12 +2,12 @@
 
 /* Fixed header container */
 .header-group {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
   min-height: 100px;
-  z-index: 10; /* ensures header is above hero */
 }
 
 /* Header row layout */
@@ -204,4 +204,61 @@
 
 .hero-desktop .button:hover .hero-button-text {
   color: var(--text-color-dark-gray);
+}
+
+/* ====== MOSAIC NAVIGATION ====== */
+.pages-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 3rem;
+  background-color: var(--background-color-light);
+}
+
+.nav-card {
+  position: relative;
+  width: 22vw;
+  max-width: 380px;
+  aspect-ratio: 1 / 1; /* keeps them square and responsive */
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: var(--card-bg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+/* Hover effect (optional) */
+.nav-card:hover {
+  transform: scale(1.02);
+}
+
+.nav-card-face-yoga {
+  background-position: center 0%; /* vertical shift */
+}
+
+.nav-card-title {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 1.5rem;
+  color: var(--background-color-white);
+  line-height: 1.2;
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 1rem;   /* distance from bottom of card */
+  left: 50%;      /* center horizontally */
+  transform: translateX(-50%);  /* shift half its width to truly center */
+  font-size: 2rem;
+  color: var(--background-color-white);
+  transition: transform 0.3s ease;
+}
+
+.nav-card:hover .card-arrow {
+  transform: translateX(-50%) translateY(-5px); /* slight lift on hover */
+  color: var(--accent-color-light-blue);
 }
