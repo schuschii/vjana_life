@@ -209,16 +209,21 @@
 /* ====== MOSAIC NAVIGATION ====== */
 .pages-navigation {
   display: flex;
-  justify-content: center;
-  gap: 5rem;
-  padding: 3rem;
+  justify-content: center; /* centers the inner grid */
   background-color: var(--background-color-light);
+  padding: 3rem 0;
+}
+
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 280px)); /* smaller cards */
+  gap: 3rem 5rem; /* row-gap column-gap */
+  justify-content: center; /* keeps them centered */
 }
 
 .nav-card {
   position: relative;
-  width: 22vw;
-  max-width: 380px;
+  width: 100%;
   aspect-ratio: 1 / 1; /* keeps them square and responsive */
   border-radius: 8px;
   overflow: hidden;
@@ -229,7 +234,7 @@
   transition: transform 0.25s ease;
 }
 
-/* Hover effect (optional) */
+/* Hover effect */
 .nav-card:hover {
   transform: scale(1.02);
 }
@@ -237,6 +242,15 @@
 .nav-card-face-yoga {
   background-position: center 0%; /* vertical shift */
 }
+
+.nav-card-hatha-yoga {
+  background-position: 75% center; /* horizontal shift */
+}
+
+.nav-card-training {
+  background-position: center 25%;
+}
+
 
 .nav-card-title {
   position: absolute;
