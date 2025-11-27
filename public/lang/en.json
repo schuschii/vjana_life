@@ -13,5 +13,10 @@
   "mosaic_face_yoga": "Face Yoga",
   "mosaic_events": "Events",
   "mosaic_training": "Training",
-  "mosaic_workshops": "Workshops"
+  "mosaic_workshops": "Workshops",
+  "newsletter-text-heading": "Become a part of the Vjana community",
+  "newsletter-text-subheading": "Sign up to our newsletter to receive the latest news, events, and special offers directly to your inbox.",
+  "newsletter-text-disclaimer": "By subscribing, you agree to receive emails and accept our privacy policy. We respect your privacy. Unsubscribe at any time.",
+  "newsletter-form-placeholder": "you@example.com",
+  "newsletter-button-text": "Subscribe"
 }
