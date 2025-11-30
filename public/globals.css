@@ -1,6 +1,11 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"); /* CSS reset */
 @import url("https://fonts.googleapis.com/css?family=Inter:400"); 
 
+/*header fixed spacing*/
+body {
+  padding-top: 100px;
+}
+
 /* Global color variables */
 :root {
   --background-color-white: #FDFCFC;
@@ -9,6 +14,50 @@
   --text-color-dark-gray: #2E3A3D;
   --accent-color-dark-blue: #35626D;
   --accent-color-light-blue: #629DA7;
+}
+
+:root {
+  /* === TYPOGRAPHY SCALE (Modern, Spacious) === */
+  --font-size-hero-title: clamp(2rem, 5vw, 4rem);      /* Hero title - matches your current */
+  --font-size-heading: clamp(1.75rem, 4vw, 3.5rem);    /* H1/H2 */
+  --font-size-subheading: clamp(1.25rem, 3vw, 2.25rem); /* H3/H4 */
+  --font-size-body: clamp(1rem, 2.2vw, 1.125rem);      /* Paragraphs */
+  --font-size-small: clamp(0.875rem, 1.8vw, 1rem);     /* Captions, disclaimers */
+  
+  /* === LINE HEIGHTS (Spacious) === */
+  --line-height-hero: 1.15;
+  --line-height-heading: 1.15;
+  --line-height-subheading: 1.3;
+  --line-height-body: 1.6;
+  --line-height-small: 1.5;
+  
+  /* === SPACING SYSTEM === */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  
+  /* === CONTAINER PADDING === */
+  --container-padding: 2.5rem;
+  --container-padding-sm: 1.5rem;
+  
+  /* === FORM ELEMENTS === */
+  --form-input-size: 1rem;
+  --form-button-size: 0.95rem;
+  --form-input-height: 2.75rem;
+  --form-button-height: 2.75rem;
+  
+  /* === INDENTATION === */
+  --text-indent-left: 0;
+  
+  /* === FONT WEIGHTS === */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 * {

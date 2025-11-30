@@ -1,8 +1,6 @@
-/* ====== GENERAL HEADER BOX ====== *
-
-/* Fixed header container */
+/* ====== GENERAL HEADER BOX ====== */
 .header-group {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,23 +8,18 @@
   min-height: 100px;
 }
 
-/* Header row layout */
 .header-desktop {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
-  gap: 0 1.5rem;
-  /* ~24px */
-  padding: 0 1.25rem;
-  /* ~20px */
+  gap: 0 var(--space-sm);
+  padding: 0 var(--space-sm);
   min-height: 100px;
   box-sizing: border-box;
   background: var(--background-color-dark);
 }
 
-
-/* Logo image */
 .logo {
   width: 100px;
   height: 100px;
@@ -37,15 +30,13 @@
 .social-list {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  /* smaller + responsive */
+  gap: var(--space-xs);
   flex: 0 0 auto;
 }
 
 .social-link {
   color: var(--text-color-dark-gray);
   font-size: 1.6rem;
-  /* icon size scales correctly */
   transition: 0.4s;
 }
 
@@ -59,38 +50,34 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: var(--space-xl);
   flex: 1;
-  /* replaces the fixed 886px width */
 }
 
-/* Menu item container */
 .navigation-item-active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
   background-color: var(--background-color-white);
   border-radius: 0.5rem;
 }
 
-/* Menu text */
 .title {
   font-family: "Inter", Helvetica;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   color: var(--text-color-dark-gray);
-  font-size: 1rem;
-  /* ~16px */
-  line-height: 1rem;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   white-space: nowrap;
 }
 
 .navigation-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
   border-radius: 0.5rem;
 }
 
@@ -102,10 +89,9 @@
 /* ====== LANGUAGE SWITCHER ====== */
 .header-language-switcher {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-xs);
   align-items: center;
-  margin-left: 3rem;
-  /* adds space between social + lang switch */
+  margin-left: var(--space-xl);
 }
 
 .separator {
@@ -115,15 +101,14 @@
 
 .lang-option {
   font-family: "Inter", Helvetica;
-  font-size: 0.85rem;
-  /* ~14px */
+  font-size: var(--font-size-small);
   color: var(--text-color-dark-gray);
   cursor: pointer;
 }
 
 .lang-option.active {
   color: var(--background-color-white);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 /* ====== HERO ====== */
@@ -137,42 +122,38 @@
   background-repeat: no-repeat;
 }
 
-/* Title container */
 .hero-desktop .hero-title {
   display: flex;
   flex-direction: column;
   max-width: 45vw;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: var(--space-xs);
   position: absolute;
   top: 10vh;
   left: 5vw;
 }
 
-/* Main title text */
 .hero-desktop .text-hero-title {
   display: block;
   text-align: left;
   font-family: "Raleway-SemiBold", Helvetica;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-color-dark-gray);
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.15;
+  font-size: var(--font-size-hero-title);
+  line-height: var(--line-height-hero);
   white-space: nowrap;
 }
 
-/* Subtitle text */
 .hero-desktop .text-hero-subtitle {
   display: block;
   text-align: left;
   font-family: "Raleway-Medium", Helvetica;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--text-color-dark-gray);
-  font-size: clamp(1.25rem, 3vw, 2.25rem);
-  line-height: 1.2;
+  font-size: var(--font-size-subheading);
+  line-height: var(--line-height-subheading);
 }
 
-/* Button group */
 .hero-desktop .button-group {
   display: flex;
   position: absolute;
@@ -183,12 +164,11 @@
   justify-content: center;
 }
 
-/* Button */
 .hero-desktop .button {
   all: unset;
   box-sizing: border-box;
   display: inline-flex;
-  padding: 0.75rem 1.25rem;
+  padding: var(--space-sm) var(--space-md);
   background-color: var(--accent-color-light-blue);
   border-radius: 0.5rem;
   align-items: center;
@@ -196,16 +176,14 @@
   cursor: pointer;
 }
 
-/* Button text */
 .hero-desktop .hero-button-text {
   font-family: "Inter-Medium", Helvetica;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   color: var(--background-color-white);
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: var(--form-button-size);
   white-space: nowrap;
 }
 
-/* Hover style */
 .hero-desktop .button:hover {
   background-color: var(--background-color-white);
 }
@@ -218,34 +196,28 @@
 .pages-navigation {
   display: flex;
   justify-content: center;
-  /* centers the inner grid */
   background-color: var(--background-color-light);
-  padding: 3rem 0;
+  padding: var(--space-xl) 0;
 }
 
 .pages-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 280px));
-  /* smaller cards */
-  gap: 3rem 5rem;
-  /* row-gap column-gap */
+  gap: var(--space-xl) var(--space-2xl);
   justify-content: center;
-  /* keeps them centered */
 }
 
- /* TODO: readjust other elements to be responsive as well */
 @media (max-width: 768px) {
   .pages-grid {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
-    gap: 2rem 2rem;
+    gap: var(--space-lg);
   }
 }
 
-/* TODO: this sizing doesnt work - 1fr - cards dissapear */
 @media (max-width: 480px) {
   .pages-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--space-md);
   }
 }
 
@@ -253,7 +225,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  /* keeps them square and responsive */
   border-radius: 8px;
   overflow: hidden;
   background-image: var(--card-bg);
@@ -263,30 +234,18 @@
   transition: transform 0.25s ease;
 }
 
-/* Hover effect */
 .nav-card:hover {
   transform: scale(1.02);
 }
 
-.nav-card-face-yoga {
-  background-position: center 0%;
-  /* vertical shift */
-}
-
-.nav-card-hatha-yoga {
-  background-position: 75% center;
-  /* horizontal shift */
-}
-
-.nav-card-training {
-  background-position: center 25%;
-}
-
+.nav-card-face-yoga { background-position: center 0%; }
+.nav-card-hatha-yoga { background-position: 75% center; }
+.nav-card-training { background-position: center 25%; }
 
 .nav-card-title {
   position: absolute;
-  top: 1rem;
-  left: 0.7rem;
+  top: var(--space-sm);
+  left: var(--space-sm);
   font-family: "Inter-Bold", Helvetica;
   font-size: 1.5rem;
   color: var(--background-color-white);
@@ -295,12 +254,9 @@
 
 .card-arrow {
   position: absolute;
-  bottom: 1rem;
-  /* distance from bottom of card */
+  bottom: var(--space-lg);
   left: 50%;
-  /* center horizontally */
   transform: translateX(-50%);
-  /* shift half its width to truly center */
   font-size: 2rem;
   color: var(--background-color-white);
   transition: transform 0.3s ease;
@@ -308,7 +264,6 @@
 
 .nav-card:hover .card-arrow {
   transform: translateX(-50%) translateY(-5px);
-  /* slight lift on hover */
   color: var(--accent-color-light-blue);
 }
 
@@ -335,81 +290,79 @@
 .newsletter .newsletter-textbox-background {
   display: flex;
   flex-direction: column;
-  width: 40vw; 
-  height: 28vw; 
-  align-items: center;
-  justify-content: center;
-  gap: 1.5vw; 
-  padding: 4vw; 
-  position: relative;
+  width: 40vw;
+  height: 28vw;             
+  padding: var(--container-padding);
   background-color: var(--accent-color-light-blue);
-  border-radius: 0.5rem; 
+  border-radius: 0.5rem;
   opacity: 0.88;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  box-sizing: border-box;
 }
 
 .newsletter .newsletter-textbox {
-  display: inline-flex;
+  width: 100%;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding: 2.5rem; 
-  position: relative;
-  flex: 0 0 auto;
-  margin-left: -4vw;
-  margin-right: -4vw; 
+  gap: var(--space-md);
+  box-sizing: border-box;
 }
 
+/*Overrides text styles*/
 .newsletter .newsletter-text-heading {
   font-family: "Inter-SemiBold", Helvetica;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--background-color-white);
-  font-size: clamp(1rem, 1.6vw, 1.8rem); /* responsive with min/max */
+  font-size: var(--font-size-subheading);
   text-align: left;
-  letter-spacing: -0.05vw;
-  line-height: 1.5;
+  line-height: var(--line-height-heading);
+  margin: 0;
 }
 
+/*Overrides text styles*/
 .newsletter .newsletter-text-subheading {
   font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   color: var(--background-color-white);
-  font-size: clamp(0.9rem, 1.3vw, 1.3rem); /* responsive */
+  font-size: var(--font-size-body);
   text-align: left;
-  line-height: 1.4;
+  line-height: var(--line-height-subheading);
+  margin: 0;
 }
 
 .newsletter .newsletter-text-disclaimer {
   font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   color: var(--background-color-white);
-  font-size: 0.9rem;
-  line-height: 1.2rem;    /* tighter line spacing for small text */
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
   text-align: left;
-  opacity: 0.85;           /* slightly less prominent */
-  margin-top: 0.5rem;     /* spacing from subheading */
+  opacity: 0.85;
+  margin: 0;
 }
 
 .newsletter .newsletter-form {
   display: flex;
-  width: 22vw;
-  align-items: flex-start;
-  gap: 1rem;
-  position: relative;
-  flex: 0 0 auto;
+  width: 100%;
+  gap: var(--space-sm);
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .newsletter .newsletter-form-input {
-  min-width: 240px;
-  padding: 0.75rem 1rem;
-  width: 100%;
+  flex: 1;
+  height: var(--form-input-height);
+  padding: var(--space-sm) var(--space-md);
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color-dark-gray);
+  font-size: var(--form-input-size);
+  line-height: var(--line-height-small);
   border: 1px solid var(--background-color-white);
   border-radius: 0.5rem;
-  flex: 1;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--text-color-dark-gray);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .newsletter .newsletter-button {
@@ -418,24 +371,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem; 
-  padding: 0.75rem 1rem; 
+  gap: var(--space-xs);
+  height: var(--form-button-height);
+  padding: 0 var(--space-md);
   background-color: var(--background-color-white);
   border-radius: 0.5rem;
   overflow: hidden;
   flex: 0 0 auto;
-  min-width: 120px; 
-  height: 3.1rem; 
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .newsletter .newsletter-button-text {
   font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   color: var(--text-color-dark-gray);
-  font-size: 1rem; 
-  line-height: 1.5rem;
-  white-space: nowrap;
+  font-size: var(--form-button-size);
+  line-height: var(--line-height-small);
 }
 
 .newsletter .newsletter-button:hover {
@@ -445,4 +397,3 @@
 .newsletter .newsletter-button:hover .newsletter-button-text {
   color: var(--background-color-white);
 }
-
