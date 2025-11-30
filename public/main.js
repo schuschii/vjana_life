@@ -13,19 +13,19 @@ function setPageInURL(page) {
 
 // Update active menu class
 function setActiveMenu(page) {
-  document.querySelectorAll(".navigation-item").forEach(item => {
-    item.classList.remove("navigation-item-active");
-    if (item.querySelector(".title").dataset.i18n === page) {
-      item.classList.add("navigation-item-active");
+  document.querySelectorAll(".header-desktop-navigation-item").forEach(item => {
+    item.classList.remove("header-desktop-navigation-item-active");
+    if (item.querySelector(".header-desktop-navigation-item-title").dataset.i18n === page) {
+      item.classList.add("header-desktop-navigation-item-active");
     }
   });
 }
 
 // Wire up menu click handlers
 function setupMenu() {
-  document.querySelectorAll(".navigation-item").forEach(item => {
+  document.querySelectorAll(".header-desktop-navigation-item").forEach(item => {
     item.addEventListener("click", () => {
-      const page = item.querySelector(".title").dataset.i18n;
+      const page = item.querySelector(".header-desktop-navigation-item-title").dataset.i18n;
       setActiveMenu(page);
       setPageInURL(page);
     });
@@ -68,7 +68,7 @@ async function applyLanguage(lang) {
   });
 
   // mark active lang option
-  document.querySelectorAll(".lang-option").forEach(option => {
+  document.querySelectorAll(".header-lang-option").forEach(option => {
     option.classList.toggle("active", option.dataset.lang === lang);
   });
 
@@ -78,7 +78,7 @@ async function applyLanguage(lang) {
 
 // wire up click handlers (call after DOM loaded)
 function setupLanguageSwitcher() {
-  document.querySelectorAll(".lang-option").forEach(option => {
+  document.querySelectorAll(".header-lang-option").forEach(option => {
     option.addEventListener("click", () => {
       const lang = option.dataset.lang;
       setLangInURL(lang);
